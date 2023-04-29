@@ -16,7 +16,7 @@ import Button from "@mui/material/Button";
 import { Container } from "@mui/material";
 
 const drawerWidth = 240;
-const navItems = ["Home", "About", "Contact"];
+const navItems = ["Home", "Our Portfolio", "Our Team", "Contact Us"];
 
 export default function Header(props) {
 	const { window } = props;
@@ -65,7 +65,12 @@ export default function Header(props) {
 							aria-label="open drawer"
 							edge="start"
 							onClick={handleDrawerToggle}
-							sx={{ mr: 2, display: { sm: "none" } }}
+							sx={{
+								mr: 2,
+								display: { md: "none" },
+								backgroundColor: "primary.main",
+								"&:hover": { backgroundColor: "primary.main" },
+							}}
 						>
 							<MenuIcon />
 						</IconButton>
@@ -87,14 +92,19 @@ export default function Header(props) {
 							{navItems.map((item) => (
 								<Button
 									key={item}
-									sx={{ color: "primary.main" }}
+									sx={{
+										color: "primary.main",
+										fontSize: "0.8rem",
+										p: 1,
+										mr: 4,
+									}}
 									variant="text"
 								>
 									{item}
 								</Button>
 							))}
+							<Button sx={{ bgcolor: "primary.green" }}>Login</Button>
 						</Box>
-						<Button sx={{ bgcolor: "primary.main" }}>Login</Button>
 					</Toolbar>
 				</Container>
 			</AppBar>

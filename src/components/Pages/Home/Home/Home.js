@@ -1,9 +1,10 @@
 import React from "react";
+import Branding from "../Branding/Branding";
 
 const Home = () => {
 	return (
 		<div>
-			<p>Home</p>
+			<Branding></Branding>
 		</div>
 	);
 };
