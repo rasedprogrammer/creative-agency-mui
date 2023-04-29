@@ -9,7 +9,21 @@ const brands = [
 	"https://i.ibb.co/Rhk2VSh/image-9.png",
 ];
 
-const BrandsWreapper = styled(Box)(({ theme }) => ({}));
+const BrandsWreapper = styled(Box)(({ theme }) => ({
+	marginBottom: "4rem",
+	display: "flex",
+	justifyContent: "space-between",
+	alignItems: "center",
+	"& > img": {
+		height: "60px",
+	},
+	[theme.breakpoints.down("md")]: {
+		flexDirection: "column",
+		"& > img": {
+			marginBottom: "1rem",
+		},
+	},
+}));
 
 const Brands = () => {
 	return (
