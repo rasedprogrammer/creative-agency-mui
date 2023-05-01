@@ -11,7 +11,12 @@ const CreativeCard = ({ image }) => {
 	const theme = useTheme();
 	return (
 		<Card
-			sx={{ maxWidth: 345, p: 2, mt: 5, borderRadius: "10px", minWidth: 345 }}
+			sx={{
+				maxWidth: 345,
+				p: 2,
+				borderRadius: "10px",
+				minWidth: 345,
+			}}
 		>
 			<CardMedia
 				component="img"

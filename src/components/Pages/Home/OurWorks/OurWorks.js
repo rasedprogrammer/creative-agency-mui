@@ -65,8 +65,12 @@ const OurWorks = () => {
 					<Box>
 						<IconButton
 							sx={{
-								border: "2px solid #959EAD",
+								border: (theme) =>
+									`1px solid ${
+										value === 0 ? "#959EAD" : theme.palette.primary.main
+									}`,
 								mr: "1rem",
+								color: "primary.main",
 								fontWeight: "bold",
 							}}
 							onClick={() => setValue(value - 1)}
@@ -76,7 +80,11 @@ const OurWorks = () => {
 						</IconButton>
 						<IconButton
 							sx={{
-								border: "2px solid #959EAD",
+								border: (theme) =>
+									`1px solid ${
+										value === 3 ? "#959EAD" : theme.palette.primary.main
+									}`,
+								color: "primary.main",
 								fontWeight: "bold",
 							}}
 							onClick={() => setValue(value + 1)}
@@ -88,7 +96,7 @@ const OurWorks = () => {
 				</Box>
 			</Box>
 			{/* Our Works Header Section End */}
-			<Grid container spacing={3} justifyContent={"center"}>
+			<Grid container spacing={3} justifyContent={"center"} my={5}>
 				{cardImages[value].map((image) => (
 					<Grid item>
 						<CreativeCard image={image}></CreativeCard>
